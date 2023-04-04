@@ -1,1 +1,82 @@
+1 ) Méthode GET et POST 
 
+
+Http://www.lemonde.fr
+
+Requête GET 
+
+En tête de la requête : 
+
+GET / HTTP/2
+Host: www.lemonde.fr
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/111.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br
+Referer: https://www.google.com/
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+Sec-Fetch-User: ?1
+
+En tête de la réponse : 
+
+HTTP/2 200 OK
+content-type: text/html; charset=UTF-8
+content-encoding: gzip
+content-security-policy: default-src data: 'unsafe-inline' 'unsafe-eval' https:; script-src data: 'unsafe-inline' 'unsafe-eval' https: blob:; style-src data: 'unsafe-inline' https:; img-src data: https: blob:; font-src data: https:; connect-src https: wss:; media-src https: blob:; object-src https:; child-src https: data: blob:; form-action https:; block-all-mixed-content;
+via: 1.1 google, 1.1 varnish
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+cache-control: private, max-age=0
+accept-ranges: bytes
+date: Mon, 03 Apr 2023 15:50:28 GMT
+x-served-by: cache-par-lfpg1960055-PAR
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1680537028.262757,VS0,VE52
+vary: Accept-Encoding
+strict-transport-security: max-age=31557600
+X-Firefox
+
+Http://www.gamekult.com
+
+Requête POST 
+
+En tête de la requête : 
+
+POST /realtime-logs HTTP/2
+Host: europe-west1-realtime-logging-228816.cloudfunctions.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/111.0
+Accept: */*
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 241
+Referer: https://www.gamekult.com/
+Origin: https://www.gamekult.com
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Connection: keep-alive
+TE: trailers 
+
+En tête de la réponse : 
+
+HTTP/2 200 OK
+access-control-allow-origin: https://www.gamekult.com
+function-execution-id: hdfo289ptzk2
+x-cloud-trace-context: 06e3cc51ed081fb7fcdb6203057c6257
+date: Mon, 03 Apr 2023 16:00:02 GMT
+content-type: text/html
+server: Google Frontend
+content-length: 0
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+X-Firefox-Spdy: h2
+
+Conclusion : Les deux méthodes GET et POST sont utilisées pour transférer des données du client au serveur avec le protocole HTTP. La différence clé entre les méthodes POST et GET est que GET transporte le paramètre dans la chaîne d’URL, tandis que POST transporte le paramètre dans le corps du message, ce qui le rend plus sûr le transfère des données du client au serveur avec le protocole http.  
+
+Souces " https://waytolearnx.com/2018/12/difference-entre-get-et-post.html?utm_content=cmp-true "
